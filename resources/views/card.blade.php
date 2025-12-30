@@ -851,7 +851,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
 
         setTimeout(() => {
             closeRsvpModal();
-        }, 100);
+        }, 0);
     });
 
 });
