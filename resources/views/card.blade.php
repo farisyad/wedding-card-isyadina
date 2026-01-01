@@ -12,6 +12,8 @@ $ucapanList = Rsvp::whereNotNull('message')
 <head>
     <link href='https://fonts.googleapis.com/css?family=Krub' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Fraunces' rel='stylesheet'>
     <meta charset="UTF-8">
     <title>Isyadina & Faris</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -166,8 +168,18 @@ $ucapanList = Rsvp::whereNotNull('message')
         }
 
         .parents p {
-            font-size: 15px;
-            margin-bottom: 24px;
+            font-size: 14px;
+            margin-bottom: 0px;
+        }
+
+        p.ayahibu-pengantin {
+            margin: 0px !important;
+            font-size: 11px !important;
+        }
+
+        .kata-jemputan {          
+            margin: 0px 32px;
+            font-size: 11px;
         }
 
         .parents .and {
@@ -176,9 +188,13 @@ $ucapanList = Rsvp::whereNotNull('message')
         }
 
         .couple-name {
-            margin-top: 40px;
-            font-size: 22px;
+            margin-top: 16px;
+            margin-bottom: 0px;
+            font-size: 20px;
             line-height: 1.6;
+            font-family: 'Alex Brush';
+            color: #846815;
+            font-weight: 600;
         }
 
         .couple-name span {
@@ -284,11 +300,12 @@ $ucapanList = Rsvp::whereNotNull('message')
         /* section - event and details */
         .event-details {
             text-align: center;
+            padding: 93px 24px;
         }
 
         .event-info p {
             margin: 8px 0;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .event-date {
@@ -298,12 +315,14 @@ $ucapanList = Rsvp::whereNotNull('message')
 
         .event-venue {
             margin-top: 12px;
-            font-style: italic;
         }
 
         .section-title {
-            margin: 40px 0 24px;
-            font-size: 20px;
+            margin: 0;
+            margin-bottom: 17px;
+            font-size: 23px;
+            font-family: 'Alex Brush';
+            color: #846815;
         }
 
         .schedule {
@@ -311,15 +330,26 @@ $ucapanList = Rsvp::whereNotNull('message')
             padding: 0;
             max-width: 400px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .schedule li {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid #e6e6e6;
-            font-size: 15px;
+        .time-schedule{
+            font-family: 'Krub';
+            color: #765b3c;
+            font-weight: bolder;
+            margin-top: 5px;
         }
+
+        .activity-schedule {
+            font-family: 'Krub';
+            color: #765b3c;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
 
         .schedule .time {
             font-weight: bold;
@@ -328,13 +358,13 @@ $ucapanList = Rsvp::whereNotNull('message')
         /* Section - Countdown and Doa */
         .doa-countdown {
             text-align: center;
+            padding: 70px 24px;
         }
 
         .doa-text {
             font-size: 15px;
             line-height: 1.8;
             max-width: 640px;
-            margin: 0 auto 40px;
         }
 
         #countdown {
@@ -359,16 +389,20 @@ $ucapanList = Rsvp::whereNotNull('message')
         .time-box span {
             font-size: 22px;
             font-weight: bold;
+            color: #765b3c;
         }
 
         .time-box small {
             font-size: 12px;
             margin-top: 4px;
+            color: #765b3c;
         }
 
         /* RSVP SUMMARY */
         .rsvp-summary {
             text-align: center;
+            padding-top: 0;
+            padding-bottom: 70px ;
         }
 
         .rsvp-summary .count {
@@ -405,7 +439,7 @@ $ucapanList = Rsvp::whereNotNull('message')
             background: #fff;
             border-radius: 16px;
             padding: 24px;
-            width: 90%;
+            width: 70%;
             max-width: 400px;
         }
 
@@ -486,6 +520,7 @@ $ucapanList = Rsvp::whereNotNull('message')
             display: block;
             font-size: 14px;
             margin-bottom: 6px;
+            color: #846815;
         }
 
         .ucapan-item p {
@@ -517,7 +552,7 @@ $ucapanList = Rsvp::whereNotNull('message')
     max-width: 420px;
     height: 100vh;
 
-    background: url('/images/CARD-BG 2.png') center top / cover no-repeat;
+    background: url('/images/CARD-BG.png') center top / cover no-repeat;
 
     z-index: 0;
     pointer-events: none;
@@ -537,9 +572,38 @@ $ucapanList = Rsvp::whereNotNull('message')
         font-size: 13px;
     }   
 
+    /* ❄️ SNOW CONTAINER */
+    #snow {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 5; /* above content, below modals */
+        overflow: hidden;
+    }
+
+    /* ❄️ INDIVIDUAL SNOWFLAKE */
+    .snowflake {
+        position: absolute;
+        top: -10px;
+        color: #765b3c;
+        font-size: 12px;
+        opacity: 0.8;
+        animation-name: fall;
+        animation-timing-function: linear;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(110vh);
+        }
+    }
+
     </style>
 </head>
 <body>
+
+<div id="snow"></div>
+
 
 <!-- COVER -->
 <div id="cover">
@@ -578,14 +642,14 @@ $ucapanList = Rsvp::whereNotNull('message')
 
                 <div class="event-date animate">
                     <div class="date-col">
-                        <span class="small">KHAMIS</span>
+                        <span class="small">AHAD</span>
                     </div>
 
                     <div class="divider"></div>
 
                     <div class="date-center">
-                        <span class="month">DEC</span>
-                        <span class="day">25</span>
+                        <span class="month">MEI</span>
+                        <span class="day">24</span>
                     </div>
 
                     <div class="divider"></div>
@@ -608,78 +672,85 @@ $ucapanList = Rsvp::whereNotNull('message')
             </section>
 
             <section class="section invitation2">
-                <p class="arabic">
-                    السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
+                <img src="/images/salam.png" class="invitation-img salam animate">
+
+                <p class="intro" style="margin: 0px 0px; margin-bottom: 28px;" >
+                    Dengan penuh kesyukuran:
                 </p>
 
-                <p class="intro">
-                    Dengan penuh kesyukuran, kami menjemput
-                    Tan Sri / Puan Sri / Dato’ / Datin / Tuan / Puan / Cik
-                    seisi keluarga ke majlis perkahwinan anakanda kami
-                </p>
-
-                <div class="parents">
+                <div class="parents" style="font-family: 'Krub'; color: #765b3c;">
                     <p>
-                        <strong>Mohamad Faiz bin Abd Manan</strong><br>
+                        <p>MUHAMAD ZAHIR BIN MAHMUD</p>
+                        <p class="ayahibu-pengantin">(Ayah Pengantin Perempuan)</p>
                         &<br>
-                        <strong>Nama Ibu Pengantin Lelaki</strong>
+                        <p style="margin:0px;">NAZHATULSIMA BINTI ABDULLAH</p>
+                        <p class="ayahibu-pengantin">(Ibu Pengantin Perempuan)</p>
                     </p>
 
-                    <p class="and">&</p>
+                    <p class="and" style="font-size: 14px;">BERSAMA</p>
 
                     <p>
-                        <strong>Muhamad Zahir bin Mahmud</strong><br>
-                        &<br>
-                        <strong>Nazhatulsima bt Abdullah</strong>
+                        <p>MOHAMAD FAIZ BIN ABD MANAN</p>
+                        <p class="ayahibu-pengantin">(Ayah Pengantin Lelaki)</p>
+                        &
+                        <p style="margin-top: 0;">MARIAM BINTI SALLEH</p>
+                        <p class="ayahibu-pengantin">(Ibu Pengantin Lelaki)</p>
                     </p>
                 </div>
 
-                <h2 class="couple-name">
-                    Faris Irsyad bin Mohamad Faiz<br>
-                    <span>&</span><br>
-                    Isyadina Zahira bt Muhamad Zahir
-                </h2>
+                <p class="kata-jemputan">Menjemput yang berbahagia Tan Sri/ Puan Sri/ Dato’ Seri/Datin Seri/ Dato’/ Datin/ Profesor/ Profesor Madya/ Doktor/ Tuan/ Puan/ Cik <br><br>
+
+-------------------------------------------------- <br> 
+Serta Keluarga ke Majlis Perkahwinan anakanda kami</p>
+
+                <p class="couple-name">
+                    Mohamad Faris Irsyad Bin Mohamad Faiz
+                    <p>dengan pilihan hatinya</p>
+                    <p class="couple-name">Nurdina Zahira Binti Muhamad Zahir</p>
+                </p>
             </section>
 
-            <section class="section event-details">
+            <img src="/images/palang.png" class="invitation-img palang animate">
+
+            <section class="section event-details animate">
                 <div class="event-info">
-                    <p class="event-date">Ahad, 12 Januari 2025</p>
+                    <img src="/images/calendar-icon.png" class="invitation-img calendar-icon animate">
+                    <p class="event-date">24 MEI 2026</p>
+                    <img src="/images/time-icon.png" class="invitation-img time-icon animate">
                     <p class="event-time">12.00 Tengah Hari – 4.30 Petang</p>
-                    <p class="event-venue">Dewan Seri Isyadina</p>
+                    <img src="/images/map-icon.png" class="invitation-img map-icon animate">
+                    <p class="event-venue">Pendang Lake Resort</p>
                 </div>
 
-                <h3 class="section-title">Aturcara Majlis</h3>
+                <h3 class="section-title" style="margin-top: 35px;">Aturcara Majlis</h3>
+                
+                <div class="schedule">
 
-                <ul class="schedule">
-                    <li>
-                        <span class="time">12:00 PM</span>
-                        <span class="activity">Ketibaan Tetamu</span>
-                    </li>
-                    <li>
-                        <span class="time">1:00 PM</span>
-                        <span class="activity">Ketibaan Pengantin</span>
-                    </li>
-                    <li>
-                        <span class="time">4:30 PM</span>
-                        <span class="activity">Majlis Bersurai</span>
-                    </li>
-                </ul>
+                        <span class="time-schedule">12:00 PM</span>
+                        <span class="activity-schedule">Ketibaan Tetamu</span>
+                        <div class="divider" style="height: 45px;"></div>
+                        <span class="time-schedule">1:00 PM</span>
+                        <span class="activity-schedule">Ketibaan Pengantin</span>
+                        <div class="divider" style="height: 45px;"></div>
+                        <span class="time-schedule">4:30 PM</span>
+                        <span class="activity-schedule">Majlis Bersurai</span>
+                    
+                </div>
             </section>
+
+            <img src="/images/palang.png" class="invitation-img palang animate">
 
             <section class="section doa-countdown">
-                <p class="arabic">
-                    بسم الله الرحمن الرحيم
-                </p>
+                <img src="/images/bismillah-countdown.png" class="invitation-img bismillah-countdown animate">
 
                 <p class="doa-text">
-                    Ya Allah, berkatilah majlis pernikahan mereka.
-                    Satukanlah hati kedua mempelai ini seperti mana Engkau
-                    satukan hati Adam dan Hawa.
-                    Semoga mereka dikurniakan kebahagiaan,
-                    rahmat dan keberkatan di dunia dan akhirat.
+                <strong>Ya Allah</strong><br>
+                Berkatilah majlis pernikahan mereka. Satukanlah hati kedua mempelai ini seperti mana Engkau satukan hati Adam dan Hawa dan seperti Engkau satukan hati Muhammad S.A.W dan Siti Khadijah. Semoga Allah S.W.T memberkati mereka serta menghimpunkan mereka kebaikan dan keberkatan didunia dan diakhirat
                 </p>
 
-                <h3 class="section-title">Majlis Akan Bermula Dalam</h3>
+                <img src="/images/palang.png" class="invitation-img palang animate">
+
+                <h3 class="section-title">Majlis Akan Bermula</h3>
 
                 <div id="countdown">
                     <div class="time-box">
@@ -699,10 +770,12 @@ $ucapanList = Rsvp::whereNotNull('message')
                         <small>Saat</small>
                     </div>
                 </div>
+
+                <img src="/images/palang.png" class="invitation-img palang animate">
             </section>
 
             <section class="section rsvp-summary">
-                <h3>Kehadiran</h3>
+                <h3 style="font-family: 'Fraunces'; color: #846815;">Kehadiran</h3>
                 <p class="count"><span id="attendanceCount">31</span> orang</p>
 
                 <button class="open-rsvp-btn" onclick="openRsvpModal()">
@@ -710,8 +783,10 @@ $ucapanList = Rsvp::whereNotNull('message')
                 </button>
             </section>
 
+            <img src="/images/palang.png" class="invitation-img palang animate">
+
             <section class="section ucapan-list">
-                <h3 class="section-title">Ucapan</h3>
+                <h3 class="section-title" style="font-family: 'Fraunces'">Ucapan</h3>
 
                 <div id="ucapanContainer">
                     @forelse ($ucapanList as $u)
@@ -723,6 +798,11 @@ $ucapanList = Rsvp::whereNotNull('message')
                         <p class="no-ucapan">Belum ada ucapan.</p>
                     @endforelse
                 </div>
+            </section>
+
+            <section class="close-cover">
+            <img src="/images/close-cover.png" class="invitation-img close-cover animate">
+
             </section>
 
 
@@ -767,31 +847,106 @@ $ucapanList = Rsvp::whereNotNull('message')
 
 
 <script>
-function openInvitation() {
-    document.getElementById('bgMusic')?.play();
+let autoScrollActive = true;
+let resumeTimer = null;
+let scrollDuration = 150000; // total scroll duration
+let remainingDuration = scrollDuration;
 
-    const cover = document.getElementById('cover');
-    cover.classList.add('open');
+/* USER INTERACTION DETECTOR */
+function pauseAutoScroll() {
+    autoScrollActive = false;
 
-    setTimeout(() => {
-        cover.style.display = 'none';
+    // Clear existing resume timer
+    if (resumeTimer) clearTimeout(resumeTimer);
 
-        const content = document.getElementById('content');
-        content.style.display = 'block';
-
-        // fade in whole content
-        content.classList.add('show');
-
-        // stagger inner animations
-        const items = document.querySelectorAll('.animate');
-        items.forEach((el, index) => {
-            setTimeout(() => {
-                el.classList.add('show');
-            }, index * 150);
-        });
-
-    }, 1200);
+    // Resume after user idle (seconds)
+    resumeTimer = setTimeout(() => {
+        autoScrollActive = true;
+        autoScrollToBottom(remainingDuration);
+    }, 4000); // ⏳ 4 seconds idle
 }
+
+['wheel', 'touchstart', 'keydown'].forEach(evt => {
+    window.addEventListener(evt, pauseAutoScroll);
+});
+
+/* AUTO SCROLL FUNCTION */
+function autoScrollToBottom(duration = 90000) {
+    const start = window.scrollY;
+    const end = document.documentElement.scrollHeight - window.innerHeight;
+    const distance = end - start;
+
+    let startTime = null;
+
+    function scrollStep(timestamp) {
+        if (!autoScrollActive) {
+            // Save remaining time
+            if (startTime) {
+                const elapsed = timestamp - startTime;
+                remainingDuration = Math.max(duration - elapsed, 5000);
+            }
+            return;
+        }
+
+        if (!startTime) startTime = timestamp;
+
+        const progress = timestamp - startTime;
+        const percent = Math.min(progress / duration, 1);
+
+        window.scrollTo(0, start + distance * percent);
+
+        if (progress < duration) {
+            requestAnimationFrame(scrollStep);
+        }
+    }
+
+    requestAnimationFrame(scrollStep);
+}
+
+
+
+function openInvitation() {
+
+    // OPTIONAL: visual feedback (circle pressed)
+    document.querySelector('.center-btn')?.classList.add('pressed');
+
+    // ⏳ WAIT 3 SECONDS BEFORE STARTING
+    
+
+        // ▶️ Start music
+        document.getElementById('bgMusic')?.play();
+
+        // 🚪 Open doors
+        const cover = document.getElementById('cover');
+        cover.classList.add('open');
+        
+
+        // After door animation
+        setTimeout(() => {
+            cover.style.display = 'none';
+
+            const content = document.getElementById('content');
+            content.style.display = 'block';
+            content.classList.add('show');
+            startSnow();
+
+            setTimeout(() => {
+                // 🔽 Start auto scroll
+                autoScrollToBottom(scrollDuration);
+            }, 3500);
+
+            // ✨ Animate elements
+            const items = document.querySelectorAll('.animate');
+            items.forEach((el, index) => {
+                setTimeout(() => el.classList.add('show'), index * 150);
+            });
+
+        }, 1200); // door animation time
+
+    
+}
+
+
 
 
 
@@ -881,6 +1036,51 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+/* FORCE PAGE TO TOP ON LOAD / REFRESH */
+window.history.scrollRestoration = 'manual';
+
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+});
+
+function startSnow() {
+    const snowContainer = document.getElementById('snow');
+    const MAX_SNOW = 40; // control amount
+
+    function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.innerHTML = '✨';
+
+        const size = Math.random() * 8 + 8;
+        const duration = Math.random() * 10 + 15;
+
+        snowflake.style.fontSize = size + 'px';
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.animationDuration = duration + 's';
+        snowflake.style.opacity = Math.random() * 0.5 + 0.3;
+
+        snowContainer.appendChild(snowflake);
+
+        setTimeout(() => {
+            snowflake.remove();
+        }, duration * 1000);
+    }
+
+    // Initial snow
+    for (let i = 0; i < MAX_SNOW / 2; i++) {
+        createSnowflake();
+    }
+
+    // Continuous snow
+    setInterval(() => {
+        if (snowContainer.childElementCount < MAX_SNOW) {
+            createSnowflake();
+        }
+    }, 500); // every 0.5s
+}
+
 
 
 </script>
