@@ -263,10 +263,10 @@ Serta Keluarga ke Majlis Perkahwinan anakanda kami</p>
                         <img src="\images\IMG_7700.JPG" alt="Gallery 1">
                     </div>
                     <div class="gallery-item animate">
-                        <img src="\images\dina-pegang-bunga.JPG" alt="Gallery 2">
+                        <img src="\images\dina-pegang-bunga.jpg" alt="Gallery 2">
                     </div>
                     <div class="gallery-item animate">
-                        <img src="\images\gelang-dina.JPG" alt="Gallery 3">
+                        <img src="\images\gelang-dina.jpg" alt="Gallery 3">
                     </div>
                     <div class="gallery-item animate">
                         <img src="\images\IMG_7605.JPG" alt="Gallery 4">
