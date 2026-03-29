@@ -155,7 +155,7 @@ Serta Keluarga ke Majlis Perkahwinan anakanda kami</p>
                 <div class="couple-grid">
                     <div class="person-card animate">
                         <div class="person-image-wrap">
-                            <img src="/images/DINA.jpg" alt="Groom" class="person-image">
+                            <img src="\images\IMG_7598.JPG" alt="Groom" class="person-image">
                         </div>
                         <!-- <p class="person-role">Pengantin Perempuan</p> -->
                         <h4 class="person-name">Dina Zahira</h4>
@@ -163,7 +163,7 @@ Serta Keluarga ke Majlis Perkahwinan anakanda kami</p>
 
                     <div class="person-card animate">
                         <div class="person-image-wrap">
-                            <img src="/images/FARIS.jpg" alt="Bride" class="person-image">
+                            <img src="\images\IMG_7598.JPG" alt="Bride" class="person-image">
                         </div>
                         <!-- <p class="person-role">Pengantin Lelaki</p> -->
                         <h4 class="person-name">Faris Irsyad</h4>
