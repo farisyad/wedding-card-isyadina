@@ -10,10 +10,15 @@ $ucapanList = Rsvp::whereNotNull('message')
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Krub' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Fraunces' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <meta charset="UTF-8">
     <title>Isyadina & Faris</title>
@@ -51,15 +56,15 @@ $ucapanList = Rsvp::whereNotNull('message')
     <div class="invitation-card">
         <div id="content" class="animate-root">
             <section class="section invitation">
-                <img src="/images/bismillah.png" class="invitation-img bismillah animate">
+                <!-- <img src="/images/bismillah.png" class="invitation-img bismillah animate"> -->
 
-                <p class="cover-greeting animate">
-                    Please join us to celebrate the wedding of:
+                <p class="cover-greeting animate" style="margin-top: 50%; font-size: 120%; font-family: 'Cinzel', serif; color: #b2935b; font-weight: 600;">
+                    WALIMATULURUS
                 </p>
 
-                <img src="/images/faris-dina-cover1.png" class="invitation-img names animate">
+                <img src="/images/INITIALS.png" class="invitation-img names animate">
 
-                <div class="event-date animate">
+                <!-- <div class="event-date animate">
                     <div class="date-col">
                         <span class="small">AHAD</span>
                     </div>
@@ -76,8 +81,17 @@ $ucapanList = Rsvp::whereNotNull('message')
                     <div class="date-col">
                         <span class="small">12 PM</span>
                     </div>
-                </div>
+                </div> -->
 
+                <p class="nama-pengantin animate" >
+                    FARIS & DINA
+                </p>
+
+                <p class="maklumat-kenduri animate" >
+                    AHAD, 24 MEI 2026 <br>
+                    ATELIER GARDEN
+                </p>
+<!-- 
                 <div class="quran-verse animate">
                     <p style="font-family:'Cormorant Garamond'; font-size: 15px; padding: 0px 21px; letter-spacing: 1px;">
                        “ And We created pairs of all things so perhaps you would be mindful. “ 
@@ -86,27 +100,31 @@ $ucapanList = Rsvp::whereNotNull('message')
                         (QS Adh-Dhariyat 51:49)
                     </p>
 
-                </div>
+                </div> -->
+
+                <p class="hashtag-kahwin animate" >
+                    #FARISDINAungicinta
+                </p>
 
             </section>
 
-            <section class="section invitation2 reveal fade-up" style="padding-top: 0;">
-                <img src="/images/salam.png" class="invitation-img salam animate">
+            <section class="section invitation2 reveal fade-up" style="padding-top: 0; margin-top: 90px;">
+                <img src="/images/salam2.png" class="invitation-img salam animate">
 
-                <p class="intro" style="margin: 0px 0px; margin-bottom: 28px;" >
+                <p class="intro" style="margin: 0px 0px; margin-bottom: 20px;" >
                     Dengan penuh kesyukuran:
                 </p>
 
                 <div class="parents" style="font-family: 'Krub'; color: #765b3c;">
                     <p>
-                        <p>MUHAMAD ZAHIR BIN MAHMUD</p>
-                        <p class="ayahibu-pengantin">(Ayah Pengantin Perempuan)</p>
+                        <p>TUAN HAJI MUHAMAD ZAHIR BIN MAHMUD</p>
+                        <!-- <p class="ayahibu-pengantin">(Ayah Pengantin Perempuan)</p> -->
                         &<br>
-                        <p style="margin:0px;">NAZHATULSIMA BINTI ABDULLAH</p>
-                        <p class="ayahibu-pengantin">(Ibu Pengantin Perempuan)</p>
+                        <p style="margin:0px;">PUAN HAJJAH NAZHATULSIMA BT ABDULLAH</p>
+                        <!-- <p class="ayahibu-pengantin">(Ibu Pengantin Perempuan)</p> -->
                     </p>
 
-                    <p class="and" style="font-size: 14px;">BERSAMA</p>
+                    <!-- <p class="and" style="font-size: 14px;">BERSAMA</p>
 
                     <p>
                         <p>MOHAMAD FAIZ BIN ABD MANAN</p>
@@ -114,7 +132,7 @@ $ucapanList = Rsvp::whereNotNull('message')
                         &
                         <p style="margin-top: 0;">MARIAM BINTI SALLEH</p>
                         <p class="ayahibu-pengantin">(Ibu Pengantin Lelaki)</p>
-                    </p>
+                    </p> -->
                 </div>
 
                 <p class="kata-jemputan">Menjemput yang berbahagia Tan Sri/ Puan Sri/ Dato’ Seri/Datin Seri/ Dato’/ Datin/ Profesor/ Profesor Madya/ Doktor/ Tuan/ Puan/ Cik <br><br>
@@ -123,10 +141,34 @@ $ucapanList = Rsvp::whereNotNull('message')
 Serta Keluarga ke Majlis Perkahwinan anakanda kami</p>
 
                 <p class="couple-name">
-                    Mohamad Faris Irsyad Bin Mohamad Faiz
+                    Nurdina Zahira Binti Muhamad Zahir
                     <p>dengan pilihan hatinya</p>
-                    <p class="couple-name">Nurdina Zahira Binti Muhamad Zahir</p>
+                    <p class="couple-name">Mohamad Faris Irsyad Bin Mohamad Faiz</p>
                 </p>
+            </section>
+
+            <img src="/images/palang.png" class="invitation-img palang animate">
+
+            <section class="section couple-profile">
+                <h3 class="section-title animate">Pengantin</h3>
+
+                <div class="couple-grid">
+                    <div class="person-card animate">
+                        <div class="person-image-wrap">
+                            <img src="/images/DINA.jpg" alt="Groom" class="person-image">
+                        </div>
+                        <!-- <p class="person-role">Pengantin Perempuan</p> -->
+                        <h4 class="person-name">Dina Zahira</h4>
+                    </div>
+
+                    <div class="person-card animate">
+                        <div class="person-image-wrap">
+                            <img src="/images/FARIS.jpg" alt="Bride" class="person-image">
+                        </div>
+                        <!-- <p class="person-role">Pengantin Lelaki</p> -->
+                        <h4 class="person-name">Faris Irsyad</h4>
+                    </div>
+                </div>
             </section>
 
             <img src="/images/palang.png" class="invitation-img palang animate">
@@ -138,7 +180,7 @@ Serta Keluarga ke Majlis Perkahwinan anakanda kami</p>
                     <img src="/images/time-icon.png" class="invitation-img time-icon animate">
                     <p class="event-time">12.00 Tengah Hari – 4.30 Petang</p>
                     <img src="/images/map-icon.png" class="invitation-img map-icon animate">
-                    <p class="event-venue">Pendang Lake Resort</p>
+                    <p class="event-venue">Atilier Garden, Alor Setar</p>
                 </div>
 
                 <h3 class="section-title" style="margin-top: 35px;">Aturcara Majlis</h3>
@@ -146,9 +188,9 @@ Serta Keluarga ke Majlis Perkahwinan anakanda kami</p>
                 <div class="schedule">
 
                         <span class="time-schedule">12:00 PM</span>
-                        <span class="activity-schedule">Ketibaan Tetamu</span>
+                        <span class="activity-schedule">Jamuan Makan</span>
                         <div class="divider" style="height: 45px;"></div>
-                        <span class="time-schedule">1:00 PM</span>
+                        <span class="time-schedule">12:30 PM</span>
                         <span class="activity-schedule">Ketibaan Pengantin</span>
                         <div class="divider" style="height: 45px;"></div>
                         <span class="time-schedule">4:30 PM</span>
@@ -212,12 +254,38 @@ Serta Keluarga ke Majlis Perkahwinan anakanda kami</p>
                 </div>
             </section>
 
+
+            <section class="section gallery-section">
+                <h3 class="section-title animate">Galeri</h3>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item animate">
+                        <img src="\images\IMG_7700.JPG" alt="Gallery 1">
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="\images\IMG_7701.JPG" alt="Gallery 2">
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="\images\IMG_7598.JPG" alt="Gallery 3">
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="\images\IMG_7605.JPG" alt="Gallery 4">
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="\images\IMG_7655.JPG" alt="Gallery 5">
+                    </div>
+                    <div class="gallery-item animate">
+                        <img src="\images\IMG_7657.JPG" alt="Gallery 6">
+                    </div>
+                </div>
+            </section>
+
+            <img src="/images/palang.png" class="invitation-img palang animate">
+
             <section class="close-cover">
             <img src="/images/close-cover.png" class="invitation-img close-cover animate">
 
             </section>
-
-
         </div>
     </div>
 </div>

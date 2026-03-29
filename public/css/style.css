@@ -1,6 +1,19 @@
+        :root {
+            --card-max: 434px;
+            --section-pad-x: 16px;
+            --section-pad-y: 36px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: 'Georgia', serif;
+            overflow-x: hidden;
 
         }
 
@@ -120,9 +133,10 @@
         }
 
         .section {
-            max-width: 720px;
+            max-width: none;
             margin: 0 auto;
-            padding: 48px 24px;
+            width: 100%;
+            padding: var(--section-pad-y) var(--section-pad-x);
             text-align: center;
             /* opacity: 0;
             transform: translateY(20px);
@@ -147,7 +161,7 @@
         }
 
         .parents p {
-            font-size: 14px;
+            font-size: 16px;
             margin-bottom: 0px;
         }
 
@@ -158,7 +172,7 @@
 
         .kata-jemputan {          
             margin: 0px 32px;
-            font-size: 11px;
+            font-size: 13px;
         }
 
         .parents .and {
@@ -169,11 +183,12 @@
         .couple-name {
             margin-top: 16px;
             margin-bottom: 0px;
-            font-size: 20px;
+            font-size: 25px;
             line-height: 1.6;
-            font-family: 'Alex Brush';
+            font-family: 'italianno';
             color: #846815;
             font-weight: 600;
+            /* letter-spacing: 1px; */
         }
 
         .couple-name span {
@@ -182,20 +197,20 @@
 
         .section.invitation {
             position: relative;
-            padding: 80px 24px;
+            padding: calc(var(--section-pad-y) + 18px) var(--section-pad-x);
 
-            background-image: url('/images/CARD-BG.png');
+            background-image: url('/images/CARD-BG 3.png');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center top;
 
             text-align: center;
-            min-height: 910px;
+            min-height: clamp(640px, 216vw, 920px);
         }
 
         .section.invitation {
             text-align: center;
-            padding-top: 55px;
+            padding-top: 42px;
         }
 
         /* universal image centering */
@@ -213,7 +228,31 @@
         }
 
         .names {
-            margin-top: 12px;
+            margin-top: 8%;
+            margin-bottom: 6%;
+        }
+
+        .nama-pengantin {
+            font-family: "Playfair Display";
+            font-weight: 600;
+            font-size: 120%;
+            color: #624a44;
+        }
+
+        .maklumat-kenduri {
+            font-size: 90%;
+            font-family: "cinzel";
+            font-weight: 600;
+            color: #3b3b3b;
+        }
+
+        .hashtag-kahwin {
+            font-family: 'Cormorant Garamond';
+            font-style: italic;
+            color: #3b3b3b;
+            font-size: 100%;
+            margin-top: 19.2px;
+            font-weight: 600;
         }
 
         .event-date {
@@ -279,7 +318,7 @@
         /* section - event and details */
         .event-details {
             text-align: center;
-            padding: 93px 24px;
+            padding: calc(var(--section-pad-y) + 20px) var(--section-pad-x);
         }
 
         .event-info p {
@@ -337,7 +376,7 @@
         /* Section - Countdown and Doa */
         .doa-countdown {
             text-align: center;
-            padding: 70px 24px;
+            padding: calc(var(--section-pad-y) + 8px) var(--section-pad-x);
         }
 
         .doa-text {
@@ -420,7 +459,7 @@
             background: #fff;
             border-radius: 16px;
             padding: 24px;
-            width: 70%;
+            width: min(92vw, 420px);
             max-width: 400px;
         }
 
@@ -520,6 +559,7 @@
     display: flex;
     justify-content: center;
     background: #fdfbf8;
+    width: 100%;
 }
 
 /* STATIC background */
@@ -529,8 +569,7 @@
     left: 50%;
     transform: translateX(-50%);
 
-    width: 100%;
-    max-width: 420px;
+    width: min(100vw, var(--card-max));
     height: 100vh;
 
     background: url('/images/CARD-BG.png') center top / cover no-repeat;
@@ -539,18 +578,34 @@
     pointer-events: none;
 }
 
+.couple-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* .person-role{
+
+} */
+
+.person-name {
+    font-family: 'italianno';
+    margin-top: 7px;
+    font-size: 30px;
+}
+
 /* content scrolls */
 .invitation-card {
     position: relative;
-    width: 100%;
-    max-width: 420px;
+    width: min(100vw, var(--card-max));
     z-index: 1;
 }
 
     p{
         color: #765b3c;
         font-family: 'Krub';
-        font-size: 13px;
+        font-size: 14px;
     }   
 
     /* ❄️ SNOW CONTAINER */
@@ -594,4 +649,96 @@
 /* Animated entry (scroll down only) */
 .reveal.animate {
     transition: all 2.8s ease;
+}
+
+@media (min-width: 640px) {
+    :root {
+        --section-pad-x: 20px;
+        --section-pad-y: 42px;
+    }
+
+    .invitation-card,
+    .invitation-bg {
+        width: min(35vw, var(--card-max));
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --section-pad-x: 24px;
+        --section-pad-y: 48px;
+    }
+
+    .section.invitation {
+        min-height: clamp(700px, 120vw, 940px);
+        padding-top: 52px;
+    }
+}
+
+@media (max-width: 420px) {
+    .bismillah {
+        margin-top: 44px;
+    }
+
+    .event-date {
+        gap: 12px;
+    }
+
+    .divider {
+        height: 48px;
+    }
+
+    .date-center .day {
+        font-size: 30px;
+    }
+
+    .couple-name {
+        font-size: 25px;
+        line-height: 1.45;
+    }
+
+    .kata-jemputan {
+        margin: 0 12px;
+    }
+
+    .time-box {
+        width: 62px;
+        height: 62px;
+    }
+}
+
+.gallery-section {
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.gallery-item {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    background: #fff;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .gallery-item img {
+        height: 260px;
+    }
 }
