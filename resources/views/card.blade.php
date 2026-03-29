@@ -149,10 +149,10 @@ Serta Keluarga ke Majlis Perkahwinan anakanda kami</p>
 
             <img src="/images/palang.png" class="invitation-img palang animate">
 
-            <section class="section couple-profile">
+            <section class="section couple-profile animate">
                 <h3 class="section-title animate">Pengantin</h3>
 
-                <div class="couple-grid">
+                <div class="couple-grid animate">
                     <div class="person-card animate">
                         <div class="person-image-wrap">
                             <img src="\images\DINA.JPG" alt="Groom" class="person-image">
@@ -263,10 +263,10 @@ Serta Keluarga ke Majlis Perkahwinan anakanda kami</p>
                         <img src="\images\IMG_7700.JPG" alt="Gallery 1">
                     </div>
                     <div class="gallery-item animate">
-                        <img src="\images\IMG_7701.JPG" alt="Gallery 2">
+                        <img src="\images\dina pegang bunga.JPG" alt="Gallery 2">
                     </div>
                     <div class="gallery-item animate">
-                        <img src="\images\IMG_7598.JPG" alt="Gallery 3">
+                        <img src="\images\gelang.JPG" alt="Gallery 3">
                     </div>
                     <div class="gallery-item animate">
                         <img src="\images\IMG_7605.JPG" alt="Gallery 4">
